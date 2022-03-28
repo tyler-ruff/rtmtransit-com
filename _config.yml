@@ -10,7 +10,7 @@ favicon: https://blazed.sirv.com/RTM/logo/rtm.png
 
 # Header and footer text
 header_text: Change <code>header_text</code> in <code>_config.yml</code>  # Change Blog header text
-header_feature_image: https://blazed.sirv.com/RTM/logo/rtm.png?w=60&h=60
+header_feature_image: https://blazed.sirv.com/RTM/rtmtransit.com/daniel-straub-n5HOJGtYt4Q-unsplash.jpg
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>.
   Developed by <a href="https://blazedlabs.com/">Blazed Labs LLC</a>; Published by <a href="https://blazed.xyz/">Blazed Publishing BD</a>.

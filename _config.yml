@@ -3,16 +3,18 @@ baseurl: "/"
 url: "https://www.rtmtransit.com"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Type on Strap                                    # site's title
-description: "A website with blog posts and pages"      # used by search engines
-avatar: assets/img/triangle.png                         # Empty for no avatar in navbar
-favicon: assets/favicon.ico                             # Icon displayed in the tab
+title: RTM 
+description: "We help get you where you want to be, right on time; everytime."
+avatar: 
+favicon: https://blazed.sirv.com/RTM/logo/rtm.png      
 
 # Header and footer text
 header_text: Change <code>header_text</code> in <code>_config.yml</code>  # Change Blog header text
-header_feature_image: assets/img/pexels/triangular.jpeg
+header_feature_image: https://blazed.sirv.com/RTM/logo/rtm.png?w=60&h=60
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>.
+  Developed by <a href="https://blazedlabs.com/">Blazed Labs LLC</a>; Published by <a href="https://blazed.xyz/">Blazed Publishing BD</a>.
+  &copy;2022 <a href="https://rtmtransit.com/">RTM Transportation LLC</a>. All Rights Reserved.
 
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable

@@ -9,7 +9,7 @@ avatar:
 favicon: https://blazed.sirv.com/RTM/logo/rtm.png      
 
 # Header and footer text
-header_text: Change <code>header_text</code> in <code>_config.yml</code>  # Change Blog header text
+header_text:  "Moving America forward." # Change Blog header text
 header_feature_image: https://blazed.sirv.com/RTM/rtmtransit.com/daniel-straub-n5HOJGtYt4Q-unsplash.jpg
 footer_text: >
   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>.
@@ -32,7 +32,7 @@ color_theme: auto                                       # auto, dark or light
 
 # Comments
 comments:
-  disqus_shortname:                                     # Your discus shortname for comments
+  disqus_shortname: rtm-transit                         # Your discus shortname for comments
   cusdis_app_id:                                        # Your cusdis data-app-id
   utterances:                                           # Enable by filling below information. For more info, go to https://utteranc.es
     repo:                                               # your public comments repository (e.g. owner/repo)

@@ -10,10 +10,9 @@ favicon: https://blazed.sirv.com/RTM/logo/rtm.png
 
 # Header and footer text
 header_text:  "Moving America forward." # Change Blog header text
-header_feature_image: https://blazed.sirv.com/RTM/rtmtransit.com/daniel-straub-n5HOJGtYt4Q-unsplash.jpg
+header_feature_image: https://blazed.sirv.com/RTM/rtmtransit.com/cristian-palmer-3leBubkp5hk-unsplash.jpg
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>.
-  Developed by <a href="https://blazedlabs.com/">Blazed Labs LLC</a>; Published by <a href="https://blazed.xyz/">Blazed Publishing BD</a>.
+  Developed by <a href="https://blazedlabs.com/">Blazed Labs LLC</a>.
   &copy;2022 <a href="https://rtmtransit.com/">RTM Transportation LLC</a>. All Rights Reserved.
 
 # Blog

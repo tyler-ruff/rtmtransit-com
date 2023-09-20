@@ -4,7 +4,7 @@ url: "https://www.rtmtransit.com"
 
 # THEME-SPECIFIC CONFIGURATION
 title: RTM 
-description: "We help get you where you want to be, right on time; everytime."
+description: "Shipping and logistics company based out of South Jersey."
 avatar: 
 favicon: https://blazed.sirv.com/RTM/logo/rtm.png      
 
@@ -12,8 +12,12 @@ favicon: https://blazed.sirv.com/RTM/logo/rtm.png
 header_text:  "Moving America forward." # Change Blog header text
 header_feature_image: https://blazed.sirv.com/RTM/rtmtransit.com/cristian-palmer-3leBubkp5hk-unsplash.jpg
 footer_text: >
-  Developed by <a href="https://blazedlabs.com/">Blazed Labs LLC</a>.
-  &copy;2022 <a href="https://rtmtransit.com/">RTM Transportation LLC</a>. All Rights Reserved.
+  &copy;<span id="site-year"></span> <a href="https://rtmtransit.com/">RTM Transportation LLC</a>. All Rights Reserved.
+  <script>
+    var year = new Date().getFullYear();
+    var date = new Date().toISOString();
+    document.getElementById('site-year').innerHTML = `<time datetime="${date}">${year}</time>`;
+  </script>
 
 # Blog
 excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable

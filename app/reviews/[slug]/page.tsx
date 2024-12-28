@@ -9,11 +9,9 @@ import { getSingleReview } from '@/lib/hooks/reviews';
 import { truncateString } from '@/lib/functions';
 import Rating from '@/components/reviews/rating';
 
-type Props = {
-    params: Promise<{ slug: string }>
-}
+type Props = Promise<{ slug: string }>;
 
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(params : Props, parent: ResolvingMetadata): Promise<Metadata> {
     const slug = (await params).slug;
     const review = getSingleReview(slug);
     if(!review){ 
@@ -30,7 +28,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     }
 }
 
-export default async function Page({ params }: Props) {
+export default async function Page(params : Props) {
     const slug = (await params).slug;
     const review = getSingleReview(slug);
 

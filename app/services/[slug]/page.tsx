@@ -5,12 +5,17 @@ import React from 'react';
 import { getSingleService } from '@/lib/hooks/services';
 import { url } from '@/config/app';
 
-type Props = {
-    params: Promise<{ slug: string }>
+interface Props {
+    params: Promise<{ slug: string }>;
+    searchParams: Promise<{ sortOrder: string }>;
 }
 
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-    const slug = (await params).slug;
+export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
+    //const slug = (await params).slug;
+    const params = await props.params;
+    const {
+        slug
+    } = params;
     const service = getSingleService(slug);
     if(!service){ 
         redirect('/404');
@@ -26,8 +31,12 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     }
 }
 
-export default function Page({ params }: { params: { slug: string } }){
-    const slug = params.slug;
+export default async function Page(props: Props){
+    const params = await props.params;
+    const {
+        slug
+    } = params;
+    //const slug = params.slug;
     const service = getSingleService(slug);
 
     return service && (

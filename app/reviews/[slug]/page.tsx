@@ -9,12 +9,17 @@ import { getSingleReview } from '@/lib/hooks/reviews';
 import { truncateString } from '@/lib/functions';
 import Rating from '@/components/reviews/rating';
 
-type Props = {
-    params: Promise<{ slug: string }>
+interface Props {
+    params: Promise<{ slug: string }>;
+    searchParams: Promise<{ sortOrder: string }>;
 }
 
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-    const slug = (await params).slug;
+export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
+    //const slug = (await params).slug;
+    const params = await props.params;
+    const {
+        slug
+    } = params;
     const review = getSingleReview(slug);
     if(!review){ 
         redirect('/404');
@@ -30,8 +35,13 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     }
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-    const slug = params.slug;
+export default async function Page(props: Props) {
+    //const slug = params.slug;
+    const params = await props.params;
+    const {
+        slug
+    } = params;
+
     const review = getSingleReview(slug);
 
     return review && (

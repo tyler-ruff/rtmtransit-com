@@ -25,6 +25,7 @@ const dm = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rtmtransit.com'),
   title: {
     template: `%s | ${config.name}`,
     default: config.name, 
@@ -35,13 +36,20 @@ export const metadata: Metadata = {
   publisher: 'Blazed Labs LLC',
   icons: {
     icon: [
-      { url: '/icons/favicon.png', sizes: '32x32', type: 'image/png'},
+      { url: '/icons/favicon.svg', type: 'image/svg+xml'},
+      { url: '/icons/favicon-16x16.png', sizes: '16x16', type: 'image/png'},
+      { url: '/icons/favicon-32x32.png', sizes: '32x32', type: 'image/png'},
       { url: '/icons/favicon-96x96.png', sizes: '96x96', type: 'image/png'},
-      { url: '/icons/favicon.svg', type: 'image/svg+xml'}
+      { url: '/icons/android-icon-192x192.png', sizes: '192x192', type: 'image/png' }
     ],
-    shortcut: '/icons/favicon.ico',
+    shortcut: '/icons/mstile-150x150.png',
     apple: [
       { url: '/icons/apple-touch-icon.png', type: 'image/png' },
+      { url: '/icons/apple-touch-icon-60x60.png', sizes: '60x60', type: 'image/png' },
+      { url: '/icons/apple-touch-icon-76x76.png', sizes: '76x76', type: 'image/png' },
+      { url: '/icons/apple-touch-icon-120x120.png', sizes: '120x120', type: 'image/png' },
+      { url: '/icons/apple-touch-icon-152x152.png', sizes: '152x152', type: 'image/png' },
+      { url: '/icons/apple-touch-icon-180x180.png', sizes: '180x180', type: 'image/png' },
     ],
     other: [
       {
@@ -73,8 +81,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${dm.variable} ${hind.variable}`} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${dm.variable} ${hind.variable}`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}

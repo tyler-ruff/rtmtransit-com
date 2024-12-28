@@ -1,10 +1,11 @@
+import { config } from '@/config/app';
 import type { MetadataRoute } from 'next';
  
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'RTM Transit',
+    name: config.name,
     short_name: 'RTM',
-    description: 'RTM Transportation LLC main website.',
+    description: config.description,
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

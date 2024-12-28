@@ -16,6 +16,7 @@ export interface Social {
     twitter?: string;
     youtube?: string;
     linkedin?: string;
+    uship?: string;
 }
 
 /**
@@ -33,6 +34,7 @@ export interface Brand {
     twitter?: string;
     email?: string;
     telephone?: string;
+    address?: string;
 }
 
 /**

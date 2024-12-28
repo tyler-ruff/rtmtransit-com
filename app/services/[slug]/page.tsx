@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     }
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function Page({ params }: Props) {
     const slug = (await params).slug;
     const service = getSingleService(slug);
 

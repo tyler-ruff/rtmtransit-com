@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     }
 }
 
-export default function Page({ params }: { params: { slug: string } }) {
-    const slug = params.slug;
+export default async function Page({ params }: Props) {
+    const slug = (await params).slug;
     const review = getSingleReview(slug);
 
     return review && (

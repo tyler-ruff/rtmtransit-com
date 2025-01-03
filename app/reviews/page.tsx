@@ -1,9 +1,14 @@
-import { cookies } from 'next/headers';
+import { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 import ContactCTA from "@/components/cta/contact";
 import ReviewCard from "@/components/reviews/card";
 import { defaultLimit, testimonialList } from "@/config/testimonials";
+
+export const metadata: Metadata = {
+    title: 'Testimonials',
+    description: 'Check out what our customers are saying about us.'
+}
 
 export default async function Reviews({
     searchParams,

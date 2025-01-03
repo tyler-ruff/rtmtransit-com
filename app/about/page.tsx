@@ -1,5 +1,12 @@
+import { Metadata } from 'next';
+
 import ContactCTA from "@/components/cta/contact";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+    title: 'About Us',
+    description: 'Learn more about RTM Transportation LLC.'
+}
 
 export default function About() {
   return (

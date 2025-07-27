@@ -1,15 +1,23 @@
+import Image from "next/image";
 import { formatTelephone } from "@/lib/functions";
 import { ITeamItem } from "./data";
 
 export default function TeamItem(props: ITeamItem){
     return (
         <div className="space-y-4">
-            <img title={`${props.name}`} alt={`Image of ${props.name}`} className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500" src={props.image || `https://blazed.sirv.com/blz.one/tyler-lastovich-yz3Lt5Kwdi8-unsplash.jpg`} />
+            <Image 
+                height={600} 
+                width={600} 
+                title={`${props.name}`} 
+                alt={`Image of ${props.name}`} 
+                className="object-cover h-56 mx-auto mb-4 bg-center rounded-sm bg-gray-500 select-none" 
+                src={props.image || `https://blazed.sirv.com/blz.one/tyler-lastovich-yz3Lt5Kwdi8-unsplash.jpg`}
+            />
             <div className="flex flex-col items-center">
-                <h4 title={`${props.title} of RTM Transportation`} className="text-xl font-semibold">
+                <h4 title={`${props.title} of RTM Transportation`} className="text-xl font-semibold select-all">
                     {props.name}
                 </h4>
-                <p title="Job Title" className="text-sm text-gray-600">
+                <p title="Job Title" className="text-sm text-gray-400 select-none">
                     {props.title}
                 </p>
                 {
@@ -25,6 +33,14 @@ export default function TeamItem(props: ITeamItem){
                         <p title="Phone Number" className="text-sm text-gray-500 hover:text-gray-900">
                             <a href={`tel:${props.contact?.phone}`}>
                                 {formatTelephone(props.contact?.phone)}
+                            </a> 
+                        </p> : ''
+                }
+                {
+                    props.social?.website ? 
+                        <p title="Personal Website" className="text-sm text-gray-500 hover:text-gray-900">
+                            <a href={props.social?.website} target="_blank">
+                                Personal Website
                             </a> 
                         </p> : ''
                 }

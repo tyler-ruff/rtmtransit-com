@@ -50,12 +50,12 @@ export const linksFooter = [
         title: "Community",
         items: [
             {
-                label: "Blog",
-                href: "/blog"
+                label: "Ocean Car Service",
+                href: "https://oceancarservice.com/"
             },
             {
-                label: "FAQ",
-                href: "/faq"
+                label: "Ruff Management",
+                href: "https://ruff-manage.com/"
             },
             {
                 label: "uShip Profile",

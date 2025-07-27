@@ -48,6 +48,6 @@ export async function submitForm(formData: FormData){
         const result = await sendMail(msg);
         return redirect('/contact?status=success');
     } catch (error) {
-
+        
     }
 }

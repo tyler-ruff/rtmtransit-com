@@ -1,6 +1,6 @@
 export default function ContactCTA(){
     return (
-        <div className="py-6 bg-gray-200 text-gray-900 border-t border-b border-gray-600">
+        <div className="py-6 bg-gray-200 text-gray-900 border-t border-b border-gray-400">
             <div className="container mx-auto flex flex-col items-center justify-center p-4 space-y-8 md:p-10 lg:space-y-0 lg:flex-row lg:justify-between">
                 <h4 className="text-3xl font-semibold leading-tight text-center lg:text-left">
                     Ready to streamline your shipping and distribution?

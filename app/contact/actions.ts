@@ -4,7 +4,7 @@ import { z } from 'zod';
 
 //import { sendMail } from "@/lib/sendgrid";
 import { sendMail } from '@/lib/nodemailer';
-import { redirect } from 'next/navigation';
+import { redirect, RedirectType } from 'next/navigation'
 
 const schema = z.object({
     email: z.string({
@@ -48,7 +48,7 @@ export async function submitForm(formData: FormData){
             `,
         };
         const result = await sendMail(msg);
-        return redirect('/contact?status=success');
+        redirect('/success', RedirectType.push);
     } catch (error) {
         console.log(`Error sending contact form: ${error}`);
     }
